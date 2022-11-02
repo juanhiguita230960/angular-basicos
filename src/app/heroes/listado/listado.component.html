@@ -1,0 +1,18 @@
+<div *ngIf="heroeBorrado !== ''; else noBorrado ">
+  <h2>Heroe Borrado: </h2>
+ <h2>{{ heroeBorrado }}</h2>
+</div>
+
+<ng-template #noBorrado>
+<h2>No ha borrado nada</h2>
+</ng-template>
+
+<p>listado de heroes</p>
+
+<ul>
+  <li *ngFor="let heroe of heroes">{{heroe}}</li>
+</ul>
+
+<button (click)="borrarHeroe()">Borrar ultimo registro</button>
+
+<button (click)="borrarPrimerHeroe()">Borrar primer heroe</button>
