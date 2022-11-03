@@ -1,0 +1,23 @@
+<h3>Agregar {{personajeNuevo.nombre}}</h3>
+<hr>
+<form (ngSubmit)="agregar()">
+  <input
+    type="text"
+    placeholder="Nombre"
+    name="nombre"
+    [(ngModel)]="personajeNuevo.nombre"
+
+  />
+  <!--
+  DE ESTA FORMA SE PUEDE CAPTURAR EL VALOR DEL INPUT PERO ESTO FUE REEMPLAZADO POR EL NGMODEL QUE HACE LO MISMO MAS SIMPLIFICADO
+  [value]="nuevo.nombre"
+  (input)="cambiarNombre($event)" -->
+
+  <input
+    type="number"
+    placeholder="Poder"
+    name="poder"
+    [(ngModel)]="personajeNuevo.poder"
+  />
+  <button type="submit">Agregar</button>
+</form>
